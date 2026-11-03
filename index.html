@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3eee2">
+  <meta name="description" content="RYOKU — kedai matcha dari Uji, Kyoto. Digiling batu setiap pekan, dikocok segar di Jakarta. Lihat menu dan pesan untuk ambil di kedai.">
+  <title>RYOKU 茶屋 — Matcha dari Uji, diseduh di Jakarta</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233f5d2b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#menu">Lompat ke menu</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="RYOKU, kembali ke atas">
+        <span class="brand-seal" aria-hidden="true">緑</span>
+        <span class="brand-name">RYOKU<small>茶屋 · Jakarta</small></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a href="#menu">Menu</a>
+        <a href="#ritual">Ritual</a>
+        <a href="#kedai">Kedai</a>
+      </nav>
+
+      <button class="cart-btn" id="cartOpen" type="button" aria-haspopup="dialog" aria-controls="cart" aria-expanded="false">
+        Keranjang
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Uji, Kyoto — sejak 2019</p>
+          <h1>Teh hijau,<br>diseduh<br><span class="accent-word">dengan tenang.</span></h1>
+          <p class="lede">Matcha upacara dari Uji, digiling batu setiap pekan dan dikocok segar di depan Anda. Satu cangkir, tanpa tergesa.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Lihat menu</a>
+            <a class="link-arrow" href="#kedai">Kunjungi kedai <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <span class="vertical-label" aria-hidden="true">一服の緑</span>
+          <svg class="enso" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="brush" x="-10%" y="-10%" width="120%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+            </defs>
+            <g filter="url(#brush)">
+              <path class="enso-stroke" d="M200 50 C292 48 352 118 352 205 C352 292 285 352 200 352 C114 352 50 290 50 200 C50 116 114 58 198 51"/>
+              <path class="enso-stroke enso-b" d="M198 62 C286 63 340 126 340 205 C340 286 278 340 200 340 C122 340 62 284 62 202 C62 126 118 70 192 62"/>
+            </g>
+          </svg>
+
+          <svg class="bowl" viewBox="0 0 360 320" role="img" aria-label="Ilustrasi mangkuk matcha keramik dengan uap">
+            <g class="steam" fill="none" stroke-linecap="round">
+              <path d="M146 128 C136 110 156 100 146 80"/>
+              <path d="M180 120 C170 100 190 90 180 68"/>
+              <path d="M214 128 C204 110 224 100 214 80"/>
+            </g>
+            <path class="bowl-body" d="M62 158 C70 252 120 292 180 292 C240 292 290 252 298 158 Z"/>
+            <ellipse class="bowl-rim" cx="180" cy="158" rx="118" ry="30"/>
+            <ellipse class="matcha" cx="180" cy="158" rx="103" ry="23"/>
+            <g class="foam">
+              <circle cx="150" cy="156" r="4"/>
+              <circle cx="176" cy="164" r="3"/>
+              <circle cx="205" cy="153" r="4.5"/>
+              <circle cx="220" cy="165" r="2.5"/>
+            </g>
+            <path class="bowl-foot" d="M140 288 L136 302 L224 302 L220 288"/>
+            <path class="bowl-line" d="M126 214 C150 236 210 236 234 214"/>
+          </svg>
+
+          <span class="seal" aria-hidden="true">茶</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="wrap strip-inner">
+        <span>Digiling batu di Uji</span>
+        <span>Diseduh per cangkir</span>
+        <span>Ambil di kedai</span>
+      </div>
+    </div>
+
+    <section class="section menu-section" id="menu">
+      <div class="wrap menu-grid">
+        <div class="menu-head">
+          <p class="kicker">01 — Menu</p>
+          <h2>Lima cangkir,<br>satu musim.</h2>
+          <p class="menu-intro">Semua matcha berasal dari kebun yang sama di Uji. Pilih panas atau dingin; tingkat manis bisa disesuaikan saat memesan.</p>
+          <p class="menu-note">Harga sudah termasuk pajak.</p>
+        </div>
+
+        <ul class="menu-list">
+          <li class="menu-item">
+            <span class="idx" aria-hidden="true">01</span>
+            <span class="glyph" aria-hidden="true">薄</span>
+            <div class="menu-info">
+              <h3>Matcha Usucha <span class="tag">klasik</span></h3>
+              <p>Matcha upacara, air 80°C, busa halus.</p>
+            </div>
+            <span class="price">Rp 28.000</span>
+            <button class="add" type="button" data-name="Matcha Usucha" data-price="28000" aria-label="Tambah Matcha Usucha ke keranjang">Tambah</button>
+          </li>
+
+          <li class="menu-item">
+            <span class="idx" aria-hidden="true">02</span>
+            <span class="glyph" aria-hidden="true">乳</span>
+            <div class="menu-info">
+              <h3>Matcha Latte</h3>
+              <p>Dua gram matcha, susu segar, sedikit gula aren.</p>
+            </div>
+            <span class="price">Rp 34.000</span>
+            <button class="add" type="button" data-name="Matcha Latte" data-price="34000" aria-label="Tambah Matcha Latte ke keranjang">Tambah</button>
+          </li>
+
+          <li class="menu-item">
+            <span class="idx" aria-hidden="true">03</span>
+            <span class="glyph" aria-hidden="true">氷</span>
+            <div class="menu-info">
+              <h3>Iced Matcha</h3>
+              <p>Matcha pekat di atas es batu, tanpa susu.</p>
+            </div>
+            <span class="price">Rp 32.000</span>
+            <button class="add" type="button" data-name="Iced Matcha" data-price="32000" aria-label="Tambah Iced Matcha ke keranjang">Tambah</button>
+          </li>
+
+          <li class="menu-item">
+            <span class="idx" aria-hidden="true">04</span>
+            <span class="glyph" aria-hidden="true">焙</span>
+            <div class="menu-info">
+              <h3>Hojicha Latte</h3>
+              <p>Teh panggang, susu, aroma karamel biji.</p>
+            </div>
+            <span class="price">Rp 32.000</span>
+            <button class="add" type="button" data-name="Hojicha Latte" data-price="32000" aria-label="Tambah Hojicha Latte ke keranjang">Tambah</button>
+          </li>
+
+          <li class="menu-item">
+            <span class="idx" aria-hidden="true">05</span>
+            <span class="glyph" aria-hidden="true">苺</span>
+            <div class="menu-info">
+              <h3>Matcha Stroberi</h3>
+              <p>Selai stroberi rumahan, matcha, susu dingin.</p>
+            </div>
+            <span class="price">Rp 38.000</span>
+            <button class="add" type="button" data-name="Matcha Stroberi" data-price="38000" aria-label="Tambah Matcha Stroberi ke keranjang">Tambah</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ritual" id="ritual">
+      <div class="wrap">
+        <p class="kicker">02 — Ritual</p>
+        <h2 class="ritual-title">Kocok, <span class="ritual-em">bukan</span> aduk.</h2>
+        <p class="ritual-lede">Tiga menit yang mengubah bubuk jadi cangkir. Kami tidak memakai mesin.</p>
+
+        <ol class="steps">
+          <li>
+            <span class="step-no">01</span>
+            <h3>Takar</h3>
+            <p>Dua gram matcha, diayak halus agar tidak menggumpal.</p>
+          </li>
+          <li>
+            <span class="step-no">02</span>
+            <h3>Tuang</h3>
+            <p>Air mineral 80°C, enam puluh mililiter. Tidak mendidih.</p>
+          </li>
+          <li>
+            <span class="step-no">03</span>
+            <h3>Kocok</h3>
+            <p>Chasen bambu, gerakan huruf W selama dua puluh detik.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section visit" id="kedai">
+      <div class="wrap visit-grid">
+        <div class="visit-copy">
+          <p class="kicker">03 — Kedai</p>
+          <h2>Mampir,<br>duduk<br>sebentar.</h2>
+          <p>Kami di sudut Cikajang, sebelah toko buku lama. Tempat duduk terbatas — datang pagi untuk kursi dekat jendela.</p>
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=Jl.+Cikajang+No.+12+Jakarta" target="_blank" rel="noopener">Buka peta</a>
+        </div>
+
+        <dl class="visit-info">
+          <div>
+            <dt>Alamat</dt>
+            <dd>Jl. Cikajang No. 12<br>Kebayoran Baru, Jakarta Selatan</dd>
+          </div>
+          <div>
+            <dt>Jam buka</dt>
+            <dd>Selasa – Minggu<br>08.00 – 20.00</dd>
+          </div>
+          <div>
+            <dt>Kontak</dt>
+            <dd><a href="https://wa.me/6281234567890">+62 812 3456 7890</a><br><a href="mailto:halo@ryoku.id">halo@ryoku.id</a></dd>
+          </div>
+          <div>
+            <dt>Ambil di kedai</dt>
+            <dd>Pesan lima belas menit sebelumnya, tanpa biaya tambahan.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="footer-seal" aria-hidden="true">緑</span>
+      <p class="footer-brand">RYOKU 茶屋 — teh hijau dari Uji, diseduh di Jakarta.</p>
+      <nav class="footer-nav" aria-label="Navigasi footer">
+        <a href="#menu">Menu</a>
+        <a href="#ritual">Ritual</a>
+        <a href="#kedai">Kedai</a>
+      </nav>
+      <p class="footer-meta">© 2026 · Dibuat dengan tenang.</p>
+    </div>
+  </footer>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="cart-head">
+      <h2 id="cartTitle">Keranjang</h2>
+      <button class="icon-btn" id="cartClose" type="button" aria-label="Tutup keranjang">×</button>
+    </div>
+
+    <div class="cart-body">
+      <p class="cart-empty" id="cartEmpty">Keranjang masih kosong. Tambahkan cangkir dari menu.</p>
+      <ul class="cart-items" id="cartItems"></ul>
+    </div>
+
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <p class="cart-note">Pembayaran di kedai. Pesanan dikonfirmasi lewat WhatsApp.</p>
+      <a class="btn btn-primary btn-block is-disabled" id="checkout" href="#" aria-disabled="true" tabindex="-1">Pesan lewat WhatsApp</a>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
